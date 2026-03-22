@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anurag Tiwary — Pirate King of Strategy</title>
+  <meta name="description" content="Delhi-based builder, brand strategist, and founder of Founder's Feed. Turning ideas into brands on the Grand Line." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor" class="cursor">
+  <div class="cursor-compass">
+    <div class="compass-inner">
+      <div class="compass-needle"></div>
+      <div class="compass-ring"></div>
+    </div>
+  </div>
+</div>
+<div id="cursor-trail-container"></div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 1: INTRO SPLASH                    -->
+<!-- ═══════════════════════════════════════════ -->
+<section id="intro-splash" class="splash-screen">
+  <div class="ocean-bg">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
+  <div class="splash-content">
+    <div class="wanted-poster-splash" id="wanted-splash">
+      <div class="poster-top-banner">WANTED</div>
+      <div class="poster-name" id="glitch-name" data-text="ANURAG TIWARY">ANURAG TIWARY</div>
+      <div class="poster-divider"></div>
+      <div class="poster-bounty">
+        <span class="bounty-label">BOUNTY:</span>
+        <span class="bounty-amount" id="bounty-counter">0</span>
+        <span class="bounty-berry">BERRY</span>
+      </div>
+    </div>
+    <div class="tagline-wrap">
+      <p class="tagline" id="typewriter-tagline"></p>
+    </div>
+    <button id="set-sail-btn" class="set-sail-btn">
+      <span class="btn-icon">⚓</span>
+      SET SAIL
+    </button>
+  </div>
+  <button id="skip-intro-btn" class="skip-btn">SKIP INTRO ›</button>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- MAIN SITE                                  -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="main-site" class="main-site hidden">
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-logo">
+      <span class="nav-logo-icon">🏴‍☠️</span>
+      <span class="nav-logo-text">ANURAG TIWARY</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">PORT</a></li>
+      <li><a href="#about" class="nav-link">LOG</a></li>
+      <li><a href="#skills" class="nav-link">HAKI</a></li>
+      <li><a href="#experience" class="nav-link">VOYAGE</a></li>
+      <li><a href="#projects" class="nav-link">BOUNTY</a></li>
+      <li><a href="#certifications" class="nav-link">POWERS</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero" class="nav-link">PORT</a></li>
+      <li><a href="#about" class="nav-link">LOG</a></li>
+      <li><a href="#skills" class="nav-link">HAKI</a></li>
+      <li><a href="#experience" class="nav-link">VOYAGE</a></li>
+      <li><a href="#projects" class="nav-link">BOUNTY</a></li>
+      <li><a href="#certifications" class="nav-link">POWERS</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 2: HERO                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="hero" class="section hero-section">
+    <!-- Ocean background -->
+    <div class="hero-ocean">
+      <svg class="ocean-waves-svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#06090f;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a1628;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="560" fill="url(#oceanGrad)" />
+        <path class="wave-path wave-path-1" d="M0,300 C360,240 720,360 1080,300 C1260,270 1380,310 1440,300 L1440,560 L0,560 Z" fill="#0d2040" opacity="0.6"/>
+        <path class="wave-path wave-path-2" d="M0,340 C300,280 700,400 1100,340 C1280,310 1400,350 1440,340 L1440,560 L0,560 Z" fill="#0a1a35" opacity="0.5"/>
+        <path class="wave-path wave-path-3" d="M0,380 C400,320 800,440 1200,380 C1340,350 1420,380 1440,380 L1440,560 L0,560 Z" fill="#071020" opacity="0.7"/>
+      </svg>
+      <div class="ship-silhouette" id="ship">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" class="ship-svg">
+          <g fill="#0d2040" opacity="0.7">
+            <!-- Hull -->
+            <path d="M20,80 Q60,95 100,95 Q140,95 180,80 L170,100 Q100,115 30,100 Z"/>
+            <!-- Main mast -->
+            <rect x="97" y="20" width="6" height="70"/>
+            <!-- Sail 1 -->
+            <path d="M103,22 L140,40 L103,58 Z" fill="#1a3060" opacity="0.8"/>
+            <!-- Sail 2 -->
+            <path d="M97,22 L60,40 L97,58 Z" fill="#1a3060" opacity="0.8"/>
+            <!-- Flag mast -->
+            <rect x="100" y="5" width="3" height="20"/>
+            <!-- Skull flag -->
+            <circle cx="110" cy="8" r="6" fill="#d42b2b" opacity="0.9"/>
+          </g>
+        </svg>
+      </div>
+      <div class="mist-particles" id="mist-container"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-left fade-in-section">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span class="status-text">OPEN TO OPPORTUNITIES</span>
+        </div>
+        <h1 class="hero-name">ANURAG<br/>TIWARY</h1>
+        <div class="hero-role">🏴‍☠️ STRATEGIST &amp; NAVIGATOR</div>
+        <p class="hero-bio">Delhi-based builder turning ideas into brands.<br/>Founder of <span class="highlight">Founder's Feed</span>. Currently leveling up.</p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn-primary">VIEW BOUNTY BOARD</a>
+          <a href="#contact" class="btn-secondary">SEND A MESSAGE</a>
+        </div>
+      </div>
+      <div class="hero-right fade-in-section">
+        <div class="wanted-poster-hero">
+          <div class="poster-frame">
+            <div class="poster-header-text">WANTED</div>
+            <div class="poster-header-sub">DEAD OR ALIVE</div>
+            <div class="poster-photo-area">
+              <div class="poster-photo-placeholder">
+                <div class="photo-inner">
+                  <div class="pirate-icon">🏴‍☠️</div>
+                  <div class="pirate-initial">A</div>
+                </div>
+              </div>
+            </div>
+            <div class="poster-criminal-name">ANURAG TIWARY</div>
+            <div class="poster-role-badge">STRATEGIST &amp; NAVIGATOR</div>
+            <div class="poster-bounty-hero">
+              <span class="pb-label">BOUNTY:</span>
+              <span class="pb-amount">∞</span>
+              <span class="pb-berry">BERRY</span>
+            </div>
+            <div class="poster-location">GRAND LINE · DELHI SEAS</div>
+            <div class="poster-stamp">LEGENDARY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="anchor-drop">⚓</div>
+      <span class="scroll-text">SCROLL TO EXPLORE</span>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0d1a2e"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 3: ABOUT                           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">📜 CAPTAIN'S LOG</div>
+      <h2 class="section-title">ORIGIN ARC</h2>
+    </div>
+    <div class="about-container fade-in-section">
+      <div class="captains-log-panel">
+        <div class="log-paper">
+          <div class="log-header">
+            <span class="log-date">LOG DATE: 2024 — DELHI SEAS</span>
+            <div class="log-stamp-small">CLASSIFIED</div>
+          </div>
+          <div class="log-body">
+            <div class="log-arc">
+              <span class="arc-tag">CHAPTER 01 — THE DOJO</span>
+              <p>Started my voyage at <strong>KV No. 1 Dojo</strong>, where the foundations were forged. Every great Pirate King has humble origins.</p>
+            </div>
+            <div class="log-arc">
+              <span class="arc-tag">CHAPTER 02 — APEEJAY HARBOR</span>
+              <p>Navigated the waters of <strong>Apeejay School</strong>, building skills in strategy, communication, and leadership.</p>
+            </div>
+            <div class="log-arc">
+              <span class="arc-tag">CHAPTER 03 — LLOYD GRAND LINE ACADEMY</span>
+              <p>Enrolled at <strong>Lloyd Business School</strong>, pursuing <strong>BBA in Marketing & International Business</strong> — not just studying business, but building in it.</p>
+            </div>
+            <div class="log-arc">
+              <span class="arc-tag">CHAPTER 04 — PIRATE BUILDER</span>
+              <p>Founded <strong>Founder's Feed</strong>. Crewed up on Fiverr, navigated corporate seas at Welspun. The journey continues to the New World.</p>
+            </div>
+          </div>
+          <div class="log-pullquote">
+            <span class="quote-icon">❝</span>
+            <p>"Not just studying business. Building in it."</p>
+            <span class="quote-sig">— Captain's Log, Entry #001</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card fade-in-section">
+          <div class="stat-icon">🏴‍☠️</div>
+          <div class="stat-number">400+</div>
+          <div class="stat-label">Crew Members (Instagram)</div>
+        </div>
+        <div class="stat-card fade-in-section">
+          <div class="stat-icon">⚓</div>
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Allies (LinkedIn)</div>
+        </div>
+        <div class="stat-card fade-in-section">
+          <div class="stat-icon">🗺️</div>
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Seas Navigated</div>
+        </div>
+        <div class="stat-card fade-in-section">
+          <div class="stat-icon">💰</div>
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Berry Bounty</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-divider-flip">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,40 1440,30 L1440,0 L0,0 Z" fill="#0d1a2e"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 4: SKILLS (HAKI ABILITY BOARD)     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">⚡ POWER SYSTEM</div>
+      <h2 class="section-title">HAKI ABILITY BOARD</h2>
+      <p class="section-subtitle">Measured in Grand Line Standard Power Units</p>
+    </div>
+    <div class="haki-board fade-in-section">
+      <div class="haki-card" data-level="88">
+        <div class="haki-card-header">
+          <span class="haki-type">OBSERVATION HAKI</span>
+          <span class="haki-category">Kenbunshoku</span>
+        </div>
+        <div class="haki-skill-name">AI &amp; Digital Tools</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="88">
+            <div class="haki-aura"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="88">0</span>
+        </div>
+        <div class="haki-tools">ChatGPT · Canva AI · n8n · Notion AI</div>
+      </div>
+
+      <div class="haki-card" data-level="82">
+        <div class="haki-card-header">
+          <span class="haki-type">ARMAMENT HAKI</span>
+          <span class="haki-category">Busoshoku</span>
+        </div>
+        <div class="haki-skill-name">Content Creation</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="82">
+            <div class="haki-aura"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="82">0</span>
+        </div>
+        <div class="haki-tools">Reels · LinkedIn Content · Brand Storytelling</div>
+      </div>
+
+      <div class="haki-card haki-conqueror" data-level="80">
+        <div class="haki-card-header">
+          <span class="haki-type">CONQUEROR'S HAKI</span>
+          <span class="haki-category">Haoshoku — RARE</span>
+        </div>
+        <div class="haki-skill-name">Brand Strategy</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="80">
+            <div class="haki-aura haki-aura-gold"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="80">0</span>
+        </div>
+        <div class="haki-tools">Market Entry · GTM Strategy · Brand Identity</div>
+      </div>
+
+      <div class="haki-card" data-level="75">
+        <div class="haki-card-header">
+          <span class="haki-type">NAVIGATION SKILL</span>
+          <span class="haki-category">Log Pose Mastery</span>
+        </div>
+        <div class="haki-skill-name">Excel &amp; Data</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="75">
+            <div class="haki-aura"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="75">0</span>
+        </div>
+        <div class="haki-tools">Excel · Data Analysis · Market Research</div>
+      </div>
+
+      <div class="haki-card" data-level="78">
+        <div class="haki-card-header">
+          <span class="haki-type">CREW COORDINATION</span>
+          <span class="haki-category">Communication</span>
+        </div>
+        <div class="haki-skill-name">Business Communication</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="78">
+            <div class="haki-aura"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="78">0</span>
+        </div>
+        <div class="haki-tools">Negotiation · Pitching · Stakeholder Mgmt</div>
+      </div>
+
+      <div class="haki-card haki-awakening" data-level="65">
+        <div class="haki-card-header">
+          <span class="haki-type">COPYWRITING</span>
+          <span class="haki-category awakening-badge">AWAKENING ↑</span>
+        </div>
+        <div class="haki-skill-name">Copywriting</div>
+        <div class="haki-bar-track">
+          <div class="haki-bar-fill" data-target="65">
+            <div class="haki-aura"></div>
+          </div>
+        </div>
+        <div class="haki-level-row">
+          <span class="haki-level-label">POWER LEVEL</span>
+          <span class="haki-level-number" data-target="65">0</span>
+        </div>
+        <div class="haki-tools">Ad Copy · Email · Social Captions · CTAs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0a1628"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 5: EXPERIENCE (VOYAGE LOG)         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="experience" class="section experience-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">🗺️ SHIP'S RECORD</div>
+      <h2 class="section-title">VOYAGE LOG</h2>
+    </div>
+    <div class="voyage-timeline">
+
+      <div class="voyage-arc fade-in-section">
+        <div class="arc-spine">
+          <div class="arc-orb">1</div>
+          <div class="arc-line"></div>
+        </div>
+        <div class="arc-card">
+          <div class="arc-header">
+            <span class="arc-number-badge">ARC 01</span>
+            <span class="arc-sea">EAST BLUE — FOUNDATION</span>
+          </div>
+          <div class="arc-company">Tare Zameen Foundation</div>
+          <div class="arc-role">Social Media & Marketing Intern</div>
+          <div class="arc-period">📅 Oct 2024 — Nov 2024 · 2 months · Mumbai / Remote</div>
+          <ul class="arc-achievements">
+            <li>🏴‍☠️ Developed social media strategy boosting engagement by 25%</li>
+            <li>🏴‍☠️ Designed infographics &amp; visuals for Instagram &amp; LinkedIn</li>
+            <li>🏴‍☠️ Researched NGO sector trends to sharpen content narrative</li>
+            <li>🏴‍☠️ Collaborated on awareness campaigns for underprivileged youth</li>
+          </ul>
+          <div class="arc-torn-edge"></div>
+        </div>
+      </div>
+
+      <div class="voyage-arc fade-in-section">
+        <div class="arc-spine">
+          <div class="arc-orb">2</div>
+          <div class="arc-line"></div>
+        </div>
+        <div class="arc-card">
+          <div class="arc-header">
+            <span class="arc-number-badge">ARC 02</span>
+            <span class="arc-sea">GRAND LINE — BUILD MODE</span>
+          </div>
+          <div class="arc-company">Founder's Feed + Fiverr</div>
+          <div class="arc-role">Founder / Freelance Brand Strategist</div>
+          <div class="arc-period">📅 2024 — Ongoing · Delhi Seas</div>
+          <ul class="arc-achievements">
+            <li>🏴‍☠️ Built Founder's Feed — community for emerging founders</li>
+            <li>🏴‍☠️ Grew to 400+ Instagram &amp; 200+ LinkedIn in organic reach</li>
+            <li>🏴‍☠️ Delivered brand strategy &amp; content packages on Fiverr</li>
+            <li>🏴‍☠️ Created GTM strategies for early-stage startups</li>
+          </ul>
+          <div class="arc-torn-edge"></div>
+        </div>
+      </div>
+
+      <div class="voyage-arc fade-in-section">
+        <div class="arc-spine">
+          <div class="arc-orb">3</div>
+        </div>
+        <div class="arc-card">
+          <div class="arc-header">
+            <span class="arc-number-badge">ARC 03</span>
+            <span class="arc-sea">NEW WORLD — RECON</span>
+          </div>
+          <div class="arc-company">Welspun Enterprises</div>
+          <div class="arc-role">Sales &amp; Marketing Intern</div>
+          <div class="arc-period">📅 Jun 2024 — Jul 2024 · 2 months · Delhi</div>
+          <ul class="arc-achievements">
+            <li>🏴‍☠️ Supported B2B sales processes &amp; client outreach campaigns</li>
+            <li>🏴‍☠️ Conducted market research on enterprise solution trends</li>
+            <li>🏴‍☠️ Created presentation decks for enterprise client pitches</li>
+            <li>🏴‍☠️ Gained intel on New World corporate seas</li>
+          </ul>
+          <div class="arc-torn-edge"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-divider-flip">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,40 1440,30 L1440,0 L0,0 Z" fill="#0a1628"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 6: PROJECTS (BOUNTY BOARD)         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">💰 MISSION REGISTRY</div>
+      <h2 class="section-title">BOUNTY BOARD</h2>
+      <p class="section-subtitle">Active operations across the Grand Line</p>
+    </div>
+    <div class="bounty-grid">
+
+      <div class="bounty-card bounty-legendary fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">BRAND CAMPAIGN</span>
+            <span class="legendary-badge">⭐ LEGENDARY</span>
+          </div>
+          <div class="bounty-project-name">INBOX IMPRESSION WINNER</div>
+          <div class="bounty-desc">Award-winning email marketing campaign combining sharp copywriting, data-driven targeting, and conversion-optimized design across the Grand Line waters.</div>
+          <div class="bounty-status completed">■ COMPLETED</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">🏆 GOLD RANK</span>
+            </div>
+          </div>
+          <div class="bounty-gold-stamp">AWARD WINNER</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+      <div class="bounty-card fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">COMMUNITY</span>
+          </div>
+          <div class="bounty-project-name">FOUNDER'S FEED</div>
+          <div class="bounty-desc">Built from zero — a content-first community for founders and builders. 400+ Instagram crew, 200+ LinkedIn allies, organic growth only.</div>
+          <div class="bounty-status active">● ACTIVE</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">∞ BERRY</span>
+            </div>
+          </div>
+          <div class="bounty-red-stamp">FOUNDER</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+      <div class="bounty-card fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">GTM STRATEGY</span>
+          </div>
+          <div class="bounty-project-name">STARTUP BRAND LAUNCH</div>
+          <div class="bounty-desc">Full go-to-market strategy for early-stage startup — brand identity, positioning, content architecture, and channel strategy delivered via Fiverr.</div>
+          <div class="bounty-status completed">■ COMPLETED</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">12M BERRY</span>
+            </div>
+          </div>
+          <div class="bounty-red-stamp">ELITE</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+      <div class="bounty-card fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">AWARENESS CAMPAIGN</span>
+          </div>
+          <div class="bounty-project-name">NGO DIGITAL ARC</div>
+          <div class="bounty-desc">Social media strategy and content system for Tare Zameen Foundation. 25% engagement growth, designed campaigns that reached underprivileged communities.</div>
+          <div class="bounty-status completed">■ COMPLETED</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">IMPACT ★★★</span>
+            </div>
+          </div>
+          <div class="bounty-red-stamp">COMPLETE</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+      <div class="bounty-card fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">B2B STRATEGY</span>
+          </div>
+          <div class="bounty-project-name">ENTERPRISE PITCH DECK</div>
+          <div class="bounty-desc">Crafted high-stakes enterprise presentation decks for Welspun Enterprises — competitive analysis, market intelligence, visual storytelling for C-suite.</div>
+          <div class="bounty-status completed">■ COMPLETED</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">8M BERRY</span>
+            </div>
+          </div>
+          <div class="bounty-red-stamp">FILED</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+      <div class="bounty-card fade-in-section">
+        <div class="bounty-paper">
+          <div class="bounty-top-bar">WANTED</div>
+          <div class="bounty-tag-row">
+            <span class="bounty-tag">AUTOMATION</span>
+          </div>
+          <div class="bounty-project-name">AI WORKFLOW SYSTEM</div>
+          <div class="bounty-desc">Built automated content and ops workflows using n8n + AI tools — cutting manual work by 60% and enabling consistent output at scale.</div>
+          <div class="bounty-status active">● ACTIVE</div>
+          <div class="bounty-bottom">
+            <div class="bounty-reward">
+              <span class="reward-label">BOUNTY REWARD</span>
+              <span class="reward-amount">ONGOING</span>
+            </div>
+          </div>
+          <div class="bounty-red-stamp">ACTIVE</div>
+          <div class="aged-texture"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#06090f"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 7: CERTIFICATIONS (DEVIL FRUITS)   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="certifications" class="section certs-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">🍎 POWER UNLOCKS</div>
+      <h2 class="section-title">DEVIL FRUIT ABILITIES</h2>
+      <p class="section-subtitle">Forbidden powers awakened through mastery</p>
+    </div>
+    <div class="devil-fruit-grid">
+
+      <div class="devil-fruit-card fade-in-section">
+        <div class="fruit-glow"></div>
+        <div class="fruit-icon">🎓</div>
+        <div class="fruit-type">PARAMECIA TYPE</div>
+        <div class="fruit-name">Marketing Fundamentals</div>
+        <div class="fruit-power">POWER: Brand Perception Manipulation</div>
+        <div class="fruit-island">📍 Google — Coursera Island</div>
+        <div class="fruit-shimmer"></div>
+      </div>
+
+      <div class="devil-fruit-card fade-in-section">
+        <div class="fruit-glow fruit-glow-red"></div>
+        <div class="fruit-icon">⚡</div>
+        <div class="fruit-type">LOGIA TYPE</div>
+        <div class="fruit-name">Advanced Content Strategy</div>
+        <div class="fruit-power">POWER: Viral Content Generation</div>
+        <div class="fruit-island">📍 HubSpot Academy</div>
+        <div class="fruit-shimmer"></div>
+      </div>
+
+      <div class="devil-fruit-card fade-in-section">
+        <div class="fruit-glow fruit-glow-gold"></div>
+        <div class="fruit-icon">🤖</div>
+        <div class="fruit-type">ZOAN TYPE — AI</div>
+        <div class="fruit-name">AI for Business Growth</div>
+        <div class="fruit-power">POWER: Digital Transformation</div>
+        <div class="fruit-island">📍 LinkedIn Learning</div>
+        <div class="fruit-shimmer"></div>
+      </div>
+
+      <div class="devil-fruit-card fade-in-section">
+        <div class="fruit-glow"></div>
+        <div class="fruit-icon">📊</div>
+        <div class="fruit-type">PARAMECIA TYPE</div>
+        <div class="fruit-name">Business Analytics</div>
+        <div class="fruit-power">POWER: Market Intelligence</div>
+        <div class="fruit-island">📍 Coursera — Data Island</div>
+        <div class="fruit-shimmer"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-divider-flip">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,40 1440,30 L1440,0 L0,0 Z" fill="#06090f"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 8: FOUNDER'S FEED SPOTLIGHT        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="founders-feed" class="section crew-section">
+    <div class="section-header fade-in-section">
+      <div class="section-label">🚢 SHIP MANIFEST</div>
+      <h2 class="section-title">CREW SPOTLIGHT</h2>
+    </div>
+    <div class="crew-panel fade-in-section">
+      <div class="crew-ship-manifest">
+        <div class="manifest-header">
+          <div class="manifest-title">FOUNDER'S FEED</div>
+          <div class="manifest-subtitle">Builder Community · Grand Line Network</div>
+        </div>
+        <div class="manifest-stats">
+          <div class="manifest-stat">
+            <div class="m-stat-number">400+</div>
+            <div class="m-stat-label">Instagram Crew</div>
+            <div class="m-stat-platform">@foundersfeed</div>
+          </div>
+          <div class="manifest-divider">⚓</div>
+          <div class="manifest-stat">
+            <div class="m-stat-number">200+</div>
+            <div class="m-stat-label">LinkedIn Allies</div>
+            <div class="m-stat-platform">Anurag Tiwary</div>
+          </div>
+        </div>
+        <div class="manifest-desc">
+          <p>A crew built for builders. Founder's Feed is where emerging entrepreneurs dock to exchange intel, strategies, and battle plans for the startup seas.</p>
+          <p>Every post = a Log Pose entry. Every follower = a crew member sailing the same waters.</p>
+        </div>
+        <a href="https://www.linkedin.com/in/anurag-tiwary" target="_blank" rel="noopener" class="crew-cta-btn">
+          <span>⚓</span> JOIN THE CREW
+        </a>
+      </div>
+      <div class="crew-decoration">
+        <div class="jolly-roger">🏴‍☠️</div>
+        <div class="crew-flags">
+          <div class="flag flag-1">STRATEGY</div>
+          <div class="flag flag-2">CONTENT</div>
+          <div class="flag flag-3">GROWTH</div>
+          <div class="flag flag-4">BRAND</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#040710"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 9: CONTACT                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="ocean-depth-bg">
+      <div class="bubble" style="left:10%;animation-delay:0s;width:8px;height:8px;"></div>
+      <div class="bubble" style="left:25%;animation-delay:1.5s;width:5px;height:5px;"></div>
+      <div class="bubble" style="left:50%;animation-delay:0.7s;width:10px;height:10px;"></div>
+      <div class="bubble" style="left:70%;animation-delay:2.2s;width:6px;height:6px;"></div>
+      <div class="bubble" style="left:85%;animation-delay:1.1s;width:9px;height:9px;"></div>
+      <div class="bubble" style="left:40%;animation-delay:3s;width:4px;height:4px;"></div>
+    </div>
+    <div class="section-header fade-in-section">
+      <div class="section-label">📡 TRANSPONDER SNAIL</div>
+      <h2 class="section-title">SEND A LETTER<br/>TO THE PIRATE KING</h2>
+    </div>
+    <div class="contact-terminal fade-in-section">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="t-dot t-dot-red"></span>
+          <span class="t-dot t-dot-yellow"></span>
+          <span class="t-dot t-dot-green"></span>
+        </div>
+        <span class="terminal-title">grand-line-transponder.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="t-prompt">$</span>
+          <span class="t-cmd typewriter-contact" id="contact-typewriter">Send a message across the Grand Line.</span>
+          <span class="t-cursor">█</span>
+        </div>
+        <div class="terminal-line">
+          <span class="t-prompt">$</span>
+          <span class="t-text">Status: <span class="t-green">OPEN TO OPPORTUNITIES</span></span>
+        </div>
+        <div class="terminal-line">
+          <span class="t-prompt">$</span>
+          <span class="t-text">Location: <span class="t-blue">Delhi, India · Grand Line</span></span>
+        </div>
+        <div class="terminal-line">
+          <span class="t-prompt">$</span>
+          <span class="t-text">Specialties: <span class="t-gold">Brand Strategy · Content · AI Tools</span></span>
+        </div>
+      </div>
+      <div class="contact-signals">
+        <a href="mailto:anurag@example.com" class="signal-flag email-flag" id="email-link">
+          <div class="flag-icon">✉</div>
+          <div class="flag-label">EMAIL SIGNAL</div>
+          <div class="flag-sublabel">anurag@example.com</div>
+        </a>
+        <a href="https://www.linkedin.com/in/anurag-tiwary" target="_blank" rel="noopener" class="signal-flag linkedin-flag">
+          <div class="flag-icon">in</div>
+          <div class="flag-label">LINKEDIN SIGNAL</div>
+          <div class="flag-sublabel">@anurag-tiwary</div>
+        </a>
+        <a href="https://www.instagram.com/foundersfeed" target="_blank" rel="noopener" class="signal-flag insta-flag">
+          <div class="flag-icon">📸</div>
+          <div class="flag-label">INSTAGRAM SIGNAL</div>
+          <div class="flag-sublabel">@foundersfeed</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">🏴‍☠️ ANURAG TIWARY</div>
+      <div class="footer-tagline">Future Pirate King of Strategy</div>
+      <div class="footer-copy">Crafted with ⚓ on the Grand Line · 2024</div>
+    </div>
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,20 C480,40 960,0 1440,20 L1440,40 L0,40 Z" fill="#06090f" opacity="0.5"/>
+      </svg>
+    </div>
+  </footer>
+
+</div><!-- end main-site -->
+
+<script src="script.js"></script>
+</body>
+</html>
